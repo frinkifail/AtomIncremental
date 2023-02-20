@@ -1,0 +1,55 @@
+/* KUIF
+Maintained Version
+Old Version in @frinkifail/kuif (Private) */
+:root {
+    --text-color: #fff;
+    --back-color: #222;
+    --text-button-color: #ff7d37;
+    --fluent-contained-button-back-color: #7e8fff;
+    --fluent-contained-button-text-color: #e9ffff;
+    --fluent-contained-button-glow-color: #bec7ff;
+}
+
+.fluent button.contained-button {
+    background-color: var(--fluent-contained-button-back-color);
+    color: var(--fluent-contained-button-text-color);
+}
+
+.fluent button.contained-button:active {
+    box-shadow: 0 0 5px 3px var(--fluent-contained-button-glow-color);
+}
+
+.kuif body, .fluent body {
+    background-color: var(--back-color);
+    color: var(--text-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.kuif code, .kuif pre, .kuif kbd, .fluent code, .fluent pre, .fluent kbd {
+    font-family: 'Roboto Mono', 'Consolas', 'Monaco', 'Inconsolata', monospace;
+}
+.kuif button.text-button, .kuif text-button, .kuif tb, .kuif tbb, .kuif text-button-big {
+    color: var(--text-button-color);
+    background: transparent;
+    border: none;
+    letter-spacing: 2px;
+    font-family: Roboto;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.kuif button.text-button.fs-big, .kuif text-button-big, .kuif tbb {
+    font-size: larger;
+}
+.kuif .blur, .fluent .blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+    z-index: 9998;
+    display: none;
+}
+.kuif .center-text {
+    text-align: center;
+}
