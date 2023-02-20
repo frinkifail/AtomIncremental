@@ -8,8 +8,15 @@
     <link rel="stylesheet" href="css/kuif.css">
 </head>
 <body>
-    <h1 id="atom-counter" class="center-text">{loading}</h1>
+    <h2 class="center-text">Atom Counts</h2>
+    <h1 id="atom-counter-full" class="center-text">
+        <span style="color: #84ff84;" id="atom-counter-oxygen">{loading}</span> oxygen <br>
+        <span id="atom-counter-hydrogen" style="color: #add8e6;">{loading}</span> hydrogen <br>
+        <span id="atom-counter-helium" style="color: #f398f3;">{loading}</span> helium <br>
+        <span id="atom-counter-phosphor" style="color: #ffffab;">{loading}</span> phosphor <br>
+    </h1>
 
 </body>
 <script src="js/game.js"></script>
+<script src="js/data.js"></script>
 </html>
