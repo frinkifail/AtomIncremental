@@ -11,5 +11,6 @@ const data = {
         hydrogen: {unlocked: false, amount: 0, cost: 125, growth: 1.1},
         helium: {unlocked: false, amount: 0, cost: 350, growth: 1.17},
         phosphor: {unlocked: false, amount: 0, cost: 720, growth: 1.2}
-    }
+    },
+    generator_timing: 500, // in ms
 }

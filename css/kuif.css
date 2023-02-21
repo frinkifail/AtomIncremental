@@ -1,6 +1,7 @@
 /* KUIF
 Maintained Version
-Old Version in @frinkifail/kuif (Private) */
+Old Version in @frinkifail/kuif (Private)
+Specifically adjusted to the game's needs */
 :root {
     --text-color: #fff;
     --back-color: #222;
@@ -53,3 +54,6 @@ Old Version in @frinkifail/kuif (Private) */
 .kuif .center-text {
     text-align: center;
 }
+
+/* prefix game classes with .atom
+incase i forgor lol */
