@@ -83,6 +83,7 @@ Specifically adjusted to the game's needs */
     width: 120px;
     background-color: var(--nav-back-color);
     box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Navigation Rail links */
@@ -105,7 +106,6 @@ Specifically adjusted to the game's needs */
 .kuif .navigation-rail .navigation-rail-content {
     margin-left: 10px;
 }
-
 
 /* prefix game classes with .atom
 incase i forgor lol */
