@@ -8,11 +8,11 @@
     <title>Atom Incremental</title>
     <link rel="stylesheet" href="css/kuif.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Material+Icons&display=swap">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/layout-grid@7.0.0/dist/mdc.layout-grid.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/drawer@7.0.0/dist/mdc.drawer.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/layout-grid@7.0.0/dist/mdc.layout-grid.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/drawer@7.0.0/dist/mdc.drawer.min.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/top-app-bar@7.0.0/dist/mdc.top-app-bar.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/list@7.0.0/dist/mdc.list.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/radio@7.0.0/dist/mdc.radio.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/list@7.0.0/dist/mdc.list.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/radio@7.0.0/dist/mdc.radio.min.css"> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/@material/drawer@7.0.0/dist/mdc.drawer.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@material/top-app-bar@7.0.0/dist/mdc.top-app-bar.min.js"></script>
 </head>
@@ -20,7 +20,8 @@
 <body>
     <nav class="navigation-rail" id="menu">
         <div class="navigation-rail-content">
-            <h3>something here</h3>
+            <a href="#home"><button class="button-transparent"><i class="fa-solid fa-house" style="font-size: 22px;"></i><span> &nbsp;Home</span></button></a>
+            <a href="#shop"><button class="button-transparent"><i class="fa-solid fa-shop" style="font-size: 22px;"></i><span> &nbsp;Shop</span></button></a>
         </div>
     </nav>
 
@@ -35,6 +36,7 @@
             </div>
         </header>
         <div class="mdc-top-app-bar--fixed-adjust">
+            <h1 id="home"></h1>
             <h1 class="center-text"><span id="atom-counter-electron" style="color: cornflowerblue;">{loading}</span>
                 electrons
             </h1>

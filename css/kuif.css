@@ -86,16 +86,24 @@ Specifically adjusted to the game's needs */
     transition: transform 0.3s ease-in-out;
 }
 
-/* Navigation Rail links */
+/* Navigation Rail links
 .kuif .navigation-rail a {
     display: block;
     padding: 12px;
     color: #616161;
     text-decoration: none;
+} */
+
+.kuif .navigation-rail a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 12px;
 }
 
 .kuif .navigation-rail a:hover {
     background-color: #f5f5f5;
+    color: var(--back-color);
 }
 
 .kuif .navigation-rail a.active {
@@ -105,6 +113,16 @@ Specifically adjusted to the game's needs */
 
 .kuif .navigation-rail .navigation-rail-content {
     margin-left: 10px;
+    margin-top: 10px;
+}
+
+.kuif .button-transparent {
+    outline: transparent;
+    border: none;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    /* cursor: pointer; */
 }
 
 /* prefix game classes with .atom
