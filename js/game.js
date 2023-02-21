@@ -3,6 +3,7 @@ const atom_counter_hydrogen = document.getElementById('atom-counter-hydrogen')
 const atom_counter_helium = document.getElementById('atom-counter-helium')
 const atom_counter_phosphor = document.getElementById('atom-counter-phosphor')
 const atom_counter_electron = document.getElementById('atom-counter-electron')
+const bang_atoms_button = document.getElementById('bang-atoms-button')
 
 function update_displays() {
     atom_counter_oxygen.innerText = data.atoms.oxygen.amount.toLocaleString()

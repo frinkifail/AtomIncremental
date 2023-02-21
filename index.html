@@ -63,7 +63,14 @@
                 <h4>Bang stuff at high speeds to make electrons</h4>
                 <h6>Don't do this at home</h6>
                 <div class="fluent">
-                    <button class="contained-button">Bang da atoms!!!</button>
+                    <button class="contained-button" id="bang-atoms-button" onclick="if (data.atoms.oxygen.amount >= 1) {data.electrons += 8; data.atoms.oxygen.amount -= 1} else {alert('Not enough Oxygen!')}; console.log('Bang Atoms Button Clicked!');">Bang da atoms!!!</button>
+                    <h3>Charges may be applied (<span id="atom-bang-cost" style="color: #ffb784;">{see below}</span>)</h3>
+                    <pre>
+Oxygen: 1 = 8 electrons
+Hydrogen: 1 = 16 electrons
+Helium: 1 = 32 electrons
+Phosphor: 1 = 64 electrons
+                    </pre>
                 </div>
             </div>
         </div>
