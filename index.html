@@ -20,13 +20,20 @@
 <body>
     <nav class="navigation-rail" id="menu">
         <div class="navigation-rail-content">
-            <a href="#home"><button class="button-transparent"><i class="fa-solid fa-house" style="font-size: 22px;"></i><span> &nbsp;Home</span></button></a>
-            <a href="#shop"><button class="button-transparent"><i class="fa-solid fa-shop" style="font-size: 22px;"></i><span> &nbsp;Shop</span></button></a>
+            <a href="#home"><button class="button-transparent"><i class="fa-solid fa-house"
+                        style="font-size: 22px;"></i><span> &nbsp;Home</span></button></a>
+            <a href="#shop"><button class="button-transparent"><i class="fa-solid fa-shop"
+                        style="font-size: 22px;"></i><span> &nbsp;Shop</span></button></a>
+            <a href="#generators"><button class="button-transparent"><i class="fa-solid fa-industry"
+                        style="font-size: 22px;"></i><span> &nbsp;Generators</span></button></a>
+            <a href="#atom_masher"><button class="button-transparent"><i class="fa-solid fa-atom"
+                        style="font-size: 22px;"></i><span> &nbsp;Atom Masher</span></button></a>
         </div>
     </nav>
 
     <main class="mdc-drawer-app-content">
-        <header class="mdc-top-app-bar" style="margin-left: 220px; transition: margin-left 0.3s ease-out;" id="appbar-main">
+        <header class="mdc-top-app-bar" style="margin-left: 220px; transition: margin-left 0.3s ease-out;"
+            id="appbar-main">
             <div class="mdc-top-app-bar__row">
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
                     <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
@@ -35,17 +42,30 @@
                 </section>
             </div>
         </header>
-        <div class="mdc-top-app-bar--fixed-adjust">
-            <h1 id="home"></h1>
-            <h1 class="center-text"><span id="atom-counter-electron" style="color: cornflowerblue;">{loading}</span>
-                electrons
-            </h1>
-            <h1 id="atom-counter-full" class="center-text">
-                <span style="color: #84ff84;" id="atom-counter-oxygen">{loading}</span>,
-                <span id="atom-counter-hydrogen" style="color: #add8e6;">{loading}</span>,
-                <span id="atom-counter-helium" style="color: #f398f3;">{loading}</span>,
-                <span id="atom-counter-phosphor" style="color: #ffffab;">{loading}</span> atoms
-            </h1>
+        <div class="mdc-top-app-bar--fixed-adjust" id="fixappbar"
+            style="transition: margin-left 0.3s ease-out; margin-left: 220px;">
+            <h1 id="home">Home</h1>
+            <div id="home-content">
+                <h1 class="center-text"><span id="atom-counter-electron" style="color: cornflowerblue;">{loading}</span>
+                    electrons
+                </h1>
+                <h1 id="atom-counter-full" class="center-text">
+                    <span style="color: #84ff84;" id="atom-counter-oxygen">{loading}</span>,
+                    <span id="atom-counter-hydrogen" style="color: #add8e6;">{loading}</span>,
+                    <span id="atom-counter-helium" style="color: #f398f3;">{loading}</span>,
+                    <span id="atom-counter-phosphor" style="color: #ffffab;">{loading}</span> atoms
+                </h1>
+            </div>
+            <h1 id="shop">Shop</h1>
+            <h1 id="generators">Generators</h1>
+            <h1 id="atom_masher">Atom Masher</h1>
+            <div id="atom_masher-content">
+                <h4>Bang stuff at high speeds to make electrons</h4>
+                <h6>Don't do this at home</h6>
+                <div class="fluent">
+                    <button class="contained-button">Bang da atoms!!!</button>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -54,4 +74,5 @@
 <script src="js/data.js"></script>
 <script src="js/game.js"></script>
 <script src="js/design.js"></script>
+
 </html>
