@@ -9,10 +9,10 @@ reveal_menu.onclick = () => {
     if (menu_open) {
         menu_open = false;
         appbar_main.style.marginLeft = "0px";
-        setTimeout(function(){menu.style.transform = "translateX(-120px)";}, 300)
+        setTimeout(function(){menu.style.transform = "translateX(-120px)";}, 0)
     } else {
         menu_open = true;
         appbar_main.style.marginLeft = "120px";
-        setTimeout(function(){menu.style.transform = "translateX(0px)";}, 300)
+        setTimeout(function(){menu.style.transform = "translateX(0px)";}, 0)
     }
 }
