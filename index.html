@@ -1,22 +1,91 @@
 <!DOCTYPE html>
 <html lang="en" class="kuif">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atom Incremental</title>
     <link rel="stylesheet" href="css/kuif.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Material+Icons&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/layout-grid@7.0.0/dist/mdc.layout-grid.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/drawer@7.0.0/dist/mdc.drawer.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/top-app-bar@7.0.0/dist/mdc.top-app-bar.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/list@7.0.0/dist/mdc.list.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/radio@7.0.0/dist/mdc.radio.min.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@material/drawer@7.0.0/dist/mdc.drawer.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@material/top-app-bar@7.0.0/dist/mdc.top-app-bar.min.js"></script>
 </head>
+
 <body>
-    <h1 class="center-text"><span id="atom-counter-electron" style="color: cornflowerblue;">{loading}</span> electrons</h1>
-    <h1 id="atom-counter-full" class="center-text">
-        <span style="color: #84ff84;" id="atom-counter-oxygen">{loading}</span>, 
-        <span id="atom-counter-hydrogen" style="color: #add8e6;">{loading}</span>, 
-        <span id="atom-counter-helium" style="color: #f398f3;">{loading}</span>, 
-        <span id="atom-counter-phosphor" style="color: #ffffab;">{loading}</span> atoms
-    </h1>
+    <!-- <nav class="mdc-drawer mdc-drawer--dismissible mdc-drawer--open">
+        <div class="mdc-drawer__content">
+            <h3 class="mdc-drawer__title">Navigation Rail</h3>
+            <nav class="mdc-drawer__nav">
+                <a class="mdc-drawer__item mdc-drawer__item--selected" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
+                    <span class="mdc-drawer__item-text">Home</span>
+                </a>
+                <a class="mdc-drawer__item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+                    <span class="mdc-drawer__item-text">Inbox</span>
+                </a>
+                <a class="mdc-drawer__item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">star</i>
+                    <span class="mdc-drawer__item-text">Star</span>
+                </a>
+                <a class="mdc-drawer__item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+                    <span class="mdc-drawer__item-text">Send</span>
+                </a>
+                <a class="mdc-drawer__item" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+                    <span class="mdc-drawer__item-text">Drafts</span>
+                </a>
+            </nav>
+        </div>
+    </nav> -->
+
+    <nav class="navigation-rail">
+        <h3>test</h3>
+    </nav>
+
+    <main class="mdc-drawer-app-content">
+        <header class="mdc-top-app-bar">
+            <div class="mdc-top-app-bar__row">
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                    <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
+                        style="background: transparent; border: none;">menu</button>
+                    <span class="mdc-top-app-bar__title">Navigation Rail</span>
+                </section>
+            </div>
+        </header>
+        <div class="mdc-top-app-bar--fixed-adjust">
+            <h1 class="center-text"><span id="atom-counter-electron" style="color: cornflowerblue;">{loading}</span>
+                electrons
+            </h1>
+            <h1 id="atom-counter-full" class="center-text">
+                <span style="color: #84ff84;" id="atom-counter-oxygen">{loading}</span>,
+                <span id="atom-counter-hydrogen" style="color: #add8e6;">{loading}</span>,
+                <span id="atom-counter-helium" style="color: #f398f3;">{loading}</span>,
+                <span id="atom-counter-phosphor" style="color: #ffffab;">{loading}</span> atoms
+            </h1>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/@material/drawer@14.0.0/dist/mdc.drawer.min.js"></script>
+    <script>
+        const drawer = MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+        const topAppBar = MDCTopAppBar.attachTo(document.querySelector('.mdc-top-app-bar'));
+        topAppBar.setScrollTarget(document.querySelector('.mdc-drawer-app-content'));
+        topAppBar.listen('MDCTopAppBar:nav', () => {
+            drawer.open = !drawer.open;
+        });
+    </script>
+
+
 </body>
 <script src="https://kit.fontawesome.com/e1a323daa1.js" crossorigin="anonymous"></script>
-<script src="js/game.js"></script>
 <script src="js/data.js"></script>
+<script src="js/game.js"></script>
 </html>
