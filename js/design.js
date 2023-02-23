@@ -11,11 +11,11 @@ reveal_menu.onclick = () => {
         menu_open = false;
         appbar_main.style.marginLeft = "0px";
         fix_appbar.style.marginLeft = "4px";
-        setTimeout(function(){menu.style.transform = "translateX(-200px)";}, 0)
+        setTimeout(function () { menu.style.transform = "translateX(-200px)"; }, 0)
     } else {
         menu_open = true;
         appbar_main.style.marginLeft = "220px";
         fix_appbar.style.marginLeft = "220px";
-        setTimeout(function(){menu.style.transform = "translateX(0px)";}, 0)
+        setTimeout(function () { menu.style.transform = "translateX(0px)"; }, 0)
     }
 }

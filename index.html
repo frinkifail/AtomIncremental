@@ -17,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@material/top-app-bar@7.0.0/dist/mdc.top-app-bar.min.js"></script>
 </head>
 
-<body>
+<body class="atom">
     <nav class="navigation-rail" id="menu">
         <div class="navigation-rail-content">
             <a href="#home"><button class="button-transparent"><i class="fa-solid fa-house"
@@ -37,7 +37,7 @@
             <div class="mdc-top-app-bar__row">
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
                     <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
-                        style="background: transparent; border: none;" id="reveal-menu">menu</button>
+                        style="border: none;" id="reveal-menu">menu</button>
                     <span class="mdc-top-app-bar__title">Atom Incremental</span>
                 </section>
             </div>
@@ -60,11 +60,21 @@
             <h1 id="generators">Generators</h1>
             <h1 id="atom_masher">Atom Masher</h1>
             <div id="atom_masher-content">
-                <h4>Bang stuff at high speeds to make electrons</h4>
-                <h6>Don't do this at home</h6>
+                <h4>Bang stuff at high speeds to make electrons <br><span
+                        style="color: #ffffff94; font-size: smaller;">Don't do this at home</span></h4>
+                <!-- <h6 style="color: #ffffff94;"></h6> -->
                 <div class="fluent">
-                    <button class="contained-button" id="bang-atoms-button" onclick="if (data.atoms.oxygen.amount >= 1) {data.electrons += 8; data.atoms.oxygen.amount -= 1} else {alert('Not enough Oxygen!')}; console.log('Bang Atoms Button Clicked!');">Bang da atoms!!!</button>
-                    <h3>Charges may be applied (<span id="atom-bang-cost" style="color: #ffb784;">{see below}</span>)</h3>
+                    <button class="contained-button" id="bang-atoms-button" onclick="convert_electron()">Bang
+                        da atoms!!!</button>
+                    <label for="element_to_mash">Element:</label>
+                    <select name="element_to_mash" id="element_to_mash">
+                        <option value="oxygen" selected>Oxygen</option>
+                        <option value="hydrogen">Hydrogen</option>
+                        <option value="helium">Helium</option>
+                        <option value="phosphor">Phosphor</option>
+                    </select>
+                    <h3>Charges may be applied (<span id="atom-bang-cost" style="color: #ffb784;">{see below}</span>)
+                    </h3>
                     <pre>
 Oxygen: 1 = 8 electrons
 Hydrogen: 1 = 16 electrons

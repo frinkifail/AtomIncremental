@@ -108,6 +108,7 @@ Specifically adjusted to the game's needs */
 .kuif .navigation-rail a:hover {
     background-color: #f5f5f5;
     color: var(--back-color);
+    border-radius: 4px;
 }
 
 .kuif .navigation-rail a.active {
@@ -127,6 +128,14 @@ Specifically adjusted to the game's needs */
     color: inherit;
     font: inherit;
     /* cursor: pointer; */
+}
+.kuif button#reveal-menu {
+    background: transparent;
+}
+.kuif button#reveal-menu:hover {
+    background: local;
+    background-color: #8080807a;
+    border-radius: 360px;
 }
 
 /* prefix game classes with .atom
