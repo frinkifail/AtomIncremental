@@ -1,95 +1,40 @@
 <!DOCTYPE html>
-<html lang="en" class="kuif atom">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atom Incremental</title>
-    <link rel="stylesheet" href="css/kuif.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Material+Icons&display=swap">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/layout-grid@7.0.0/dist/mdc.layout-grid.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/drawer@7.0.0/dist/mdc.drawer.min.css"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/top-app-bar@7.0.0/dist/mdc.top-app-bar.min.css">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/list@7.0.0/dist/mdc.list.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/radio@7.0.0/dist/mdc.radio.min.css"> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@material/drawer@7.0.0/dist/mdc.drawer.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/@material/top-app-bar@7.0.0/dist/mdc.top-app-bar.min.js"></script>
+    <title>Atom Incremental - Login</title>
 </head>
 
 <body>
-    <nav class="navigation-rail" id="menu">
-        <div class="navigation-rail-content">
-            <a href="#home"><button class="button-transparent"><i class="fa-solid fa-house"
-                        style="font-size: 22px;"></i><span> &nbsp;Home</span></button></a>
-            <a href="#shop"><button class="button-transparent"><i class="fa-solid fa-shop"
-                        style="font-size: 22px;"></i><span> &nbsp;Shop</span></button></a>
-            <a href="#generators"><button class="button-transparent"><i class="fa-solid fa-industry"
-                        style="font-size: 22px;"></i><span> &nbsp;Generators</span></button></a>
-            <a href="#atom_masher"><button class="button-transparent"><i class="fa-solid fa-atom"
-                        style="font-size: 22px;"></i><span> &nbsp;Atom Masher</span></button></a>
-        </div>
-    </nav>
+    <div id="firebaseui-auth-container">
+        <!-- This is where the Login ui will load -->
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
 
-    <main class="mdc-drawer-app-content">
-        <header class="mdc-top-app-bar" style="margin-left: 220px; transition: margin-left 0.3s ease-out;"
-            id="appbar-main">
-            <div class="mdc-top-app-bar__row">
-                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-                    <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
-                        style="border: none;" id="reveal-menu">menu</button>
-                    <span class="mdc-top-app-bar__title">Atom Incremental</span>
-                </section>
-            </div>
-        </header>
-        <div class="mdc-top-app-bar--fixed-adjust" id="fixappbar"
-            style="transition: margin-left 0.3s ease-out; margin-left: 220px;">
-            <h1 id="home">Home</h1>
-            <div id="home-content">
-                <h1 class="center-text"><span id="atom-counter-electron" style="color: cornflowerblue;">{loading}</span>
-                    electrons
-                </h1>
-                <h1 id="atom-counter-full" class="center-text">
-                    <span style="color: #84ff84;" id="atom-counter-oxygen">{loading}</span>,
-                    <span id="atom-counter-hydrogen" style="color: #add8e6;">{loading}</span>,
-                    <span id="atom-counter-helium" style="color: #f398f3;">{loading}</span>,
-                    <span id="atom-counter-phosphor" style="color: #ffffab;">{loading}</span> atoms
-                </h1>
-                <button class="text-button fs-big" id="buy-max-button">Buy Max: <span id="buy-max-value-display">{loading}</span></button>
-            </div>
-            <h1 id="shop">Shop</h1>
-            <h1 id="generators">Generators</h1>
-            <h1 id="atom_masher">Atom Masher</h1>
-            <div id="atom_masher-content">
-                <h4>Bang stuff at high speeds to make electrons <br><span
-                        style="color: #ffffff94; font-size: smaller;">Don't do this at home</span></h4>
-                <!-- <h6 style="color: #ffffff94;"></h6> -->
-                    <button class="text-button" id="bang-atoms-button">Bang
-                        da atoms!!!</button>
-                    <label for="element_to_mash">Element:</label>
-                    <select name="element_to_mash" id="element_to_mash">
-                        <option value="oxygen" selected>Oxygen</option>
-                        <option value="hydrogen">Hydrogen</option>
-                        <option value="helium">Helium</option>
-                        <option value="phosphor">Phosphor</option>
-                    </select>
-                    <h3>Charges may be applied (<span id="atom-bang-cost" style="color: #ffb784;">{see below}</span>)
-                    </h3>
-                    <pre>
-Oxygen: 1 = 8 electrons
-Hydrogen: 1 = 16 electrons
-Helium: 1 = 32 electrons
-Phosphor: 1 = 64 electrons
-                    </pre>
-                </div>
-            </div>
-        </div>
-    </main>
-
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#config-web-app -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAnfHnLTKFXv6Mc5pp5UvYE3tUqmBQ3raU",
+            authDomain: "atom-incremental.firebaseapp.com",
+            projectId: "atom-incremental",
+            storageBucket: "atom-incremental.appspot.com",
+            messagingSenderId: "1015449312508",
+            appId: "1:1015449312508:web:6ca6f4eaea0373e4bd0b79"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <script src="js/firebase_init_app.js"></script>
 </body>
-<script src="https://kit.fontawesome.com/e1a323daa1.js" crossorigin="anonymous"></script>
-<script src="js/data.js"></script>
-<script src="js/game.js"></script>
-<script src="js/design.js"></script>
+<!-- <script src="js/firebase.js"></script> -->
 
 </html>
