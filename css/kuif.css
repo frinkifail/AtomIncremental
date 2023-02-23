@@ -138,5 +138,12 @@ Specifically adjusted to the game's needs */
     border-radius: 360px;
 }
 
+.kuif.atom button#buy-max-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 550px;
+}
+
 /* prefix game classes with .atom
 incase i forgor lol */

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="kuif">
+<html lang="en" class="kuif atom">
 
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@material/top-app-bar@7.0.0/dist/mdc.top-app-bar.min.js"></script>
 </head>
 
-<body class="atom">
+<body>
     <nav class="navigation-rail" id="menu">
         <div class="navigation-rail-content">
             <a href="#home"><button class="button-transparent"><i class="fa-solid fa-house"
@@ -55,6 +55,7 @@
                     <span id="atom-counter-helium" style="color: #f398f3;">{loading}</span>,
                     <span id="atom-counter-phosphor" style="color: #ffffab;">{loading}</span> atoms
                 </h1>
+                <button class="text-button fs-big" id="buy-max-button">Buy Max: <span id="buy-max-value-display">{loading}</span></button>
             </div>
             <h1 id="shop">Shop</h1>
             <h1 id="generators">Generators</h1>
@@ -63,8 +64,7 @@
                 <h4>Bang stuff at high speeds to make electrons <br><span
                         style="color: #ffffff94; font-size: smaller;">Don't do this at home</span></h4>
                 <!-- <h6 style="color: #ffffff94;"></h6> -->
-                <div class="fluent">
-                    <button class="contained-button" id="bang-atoms-button" onclick="convert_electron()">Bang
+                    <button class="text-button" id="bang-atoms-button">Bang
                         da atoms!!!</button>
                     <label for="element_to_mash">Element:</label>
                     <select name="element_to_mash" id="element_to_mash">

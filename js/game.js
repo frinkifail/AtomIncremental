@@ -9,13 +9,19 @@ const bang_atoms_button = document.getElementById('bang-atoms-button')
 let selected_atom_electron_bang_option = null; // expect a string
 let buy_max = false;
 
-document.getElementById('buy_max_button').onclick = () => {
+document.getElementById('buy-max-button').onclick = () => {
     if (buy_max) {
         buy_max = false;
     } else {
         buy_max = true;
     }
 }
+
+function convert_electron() {
+
+}
+
+document.getElementById('bang-atoms-button').onclick = convert_electron
 
 function update_displays() {
     atom_counter_oxygen.innerText = data.atoms.oxygen.amount.toLocaleString()
