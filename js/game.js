@@ -12,8 +12,10 @@ let buy_max = false;
 document.getElementById('buy-max-button').onclick = () => {
     if (buy_max) {
         buy_max = false;
+        document.getElementById('buy-max-value-display').innerText = "false"
     } else {
         buy_max = true;
+        document.getElementById('buy-max-value-display').innerText = "true"
     }
 }
 
@@ -47,6 +49,7 @@ function update_misc() {
 }
 
 const update_interval = setInterval(update_displays, 20)
+const misc_interval = setInterval(update_misc, 10)
 let game_interval = setInterval(update_game, data.generator_timing)
 
 function update_game_interval() {
