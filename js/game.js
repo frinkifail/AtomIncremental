@@ -4,6 +4,7 @@ const atom_counter_helium = document.getElementById('atom-counter-helium')
 const atom_counter_phosphor = document.getElementById('atom-counter-phosphor')
 const atom_counter_electron = document.getElementById('atom-counter-electron')
 const bang_atoms_button = document.getElementById('bang-atoms-button')
+const element_to_mash = document.getElementById('element_to_mash')
 
 // Stuff?
 let selected_atom_electron_bang_option = null; // expect a string
@@ -20,7 +21,12 @@ document.getElementById('buy-max-button').onclick = () => {
 }
 
 function convert_electron() {
-
+    if (element_to_mash.value === "oxygen") {
+        if (data.atoms.oxygen.amount >= 1) {
+            data.atoms.oxygen.amount -= 1
+        data.electrons += 8
+        } else;
+    }
 }
 
 document.getElementById('bang-atoms-button').onclick = convert_electron

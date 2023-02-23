@@ -79,7 +79,7 @@ Specifically adjusted to the game's needs */
 }
 
 /* Navigation Rail container */
-.kuif .navigation-rail {
+.kuif.atom .navigation-rail {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -98,25 +98,25 @@ Specifically adjusted to the game's needs */
     text-decoration: none;
 } */
 
-.kuif .navigation-rail a {
+.kuif.atom .navigation-rail a {
     display: block;
     text-decoration: none;
     color: inherit;
     padding: 12px;
 }
 
-.kuif .navigation-rail a:hover {
+.kuif.atom .navigation-rail a:hover {
     background-color: #f5f5f5;
     color: var(--back-color);
     border-radius: 4px;
 }
 
-.kuif .navigation-rail a.active {
+.kuif.atom .navigation-rail a.active {
     background-color: #1976d2;
     color: #fff;
 }
 
-.kuif .navigation-rail .navigation-rail-content {
+.kuif.atom .navigation-rail .navigation-rail-content {
     margin-left: 10px;
     margin-top: 10px;
 }
@@ -129,13 +129,20 @@ Specifically adjusted to the game's needs */
     font: inherit;
     /* cursor: pointer; */
 }
-.kuif button#reveal-menu {
+.kuif.atom button#reveal-menu {
     background: transparent;
 }
-.kuif button#reveal-menu:hover {
+.kuif.atom button#reveal-menu:hover {
     background: local;
     background-color: #8080807a;
     border-radius: 360px;
+}
+
+.kuif select {
+    background-color: var(--nav-back-color);
+    color: inherit;
+    font-family: inherit;
+    border-radius: 4px;
 }
 
 .kuif.atom button#buy-max-button {
