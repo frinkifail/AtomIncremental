@@ -2,6 +2,9 @@
 Maintained Version
 Old Version in @frinkifail/kuif (Private)
 Specifically adjusted to the game's needs */
+.kuif * { /* sheesh, looks pretty good */
+    border-radius: 4px;
+}
 :root {
     --text-color: #fff;
     --back-color: #222;
