@@ -46,17 +46,21 @@
             style="transition: margin-left 0.3s ease-out; margin-left: 220px;">
             <h1 id="home">Home</h1>
             <div id="home-content">
-                <h1 class="center-text"><span id="atom-counter-electron" style="color: cornflowerblue;">{loading}</span>
-                    electrons
-                </h1>
-                <h1 id="atom-counter-full" class="center-text">
-                    <span style="color: #84ff84;" id="atom-counter-oxygen">{loading}</span>,
-                    <span id="atom-counter-hydrogen" style="color: #add8e6;">{loading}</span>,
-                    <span id="atom-counter-helium" style="color: #f398f3;">{loading}</span>,
-                    <span id="atom-counter-phosphor" style="color: #ffffab;">{loading}</span> atoms
-                </h1>
+                <div id="home-content-blur">
+                    <h1 class="center-text"><span id="atom-counter-electron"
+                            style="color: cornflowerblue;">{loading}</span>
+                        electrons
+                    </h1>
+                    <h1 id="atom-counter-full" class="center-text">
+                        <span style="color: #84ff84;" id="atom-counter-oxygen">{loading}</span>,
+                        <span id="atom-counter-hydrogen" style="color: #add8e6;">{loading}</span>,
+                        <span id="atom-counter-helium" style="color: #f398f3;">{loading}</span>,
+                        <span id="atom-counter-phosphor" style="color: #ffffab;">{loading}</span> atoms
+                    </h1>
+                </div>
+
                 <button class="text-button fs-big" id="buy-max-button">Buy Max: <span
-                        id="buy-max-value-display">{loading}</span></button>
+                        id="buy-max-value-display">false</span></button>
             </div>
             <h1 id="shop">Shop</h1>
             <h1 id="generators">Generators</h1>

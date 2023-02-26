@@ -135,7 +135,7 @@ Specifically adjusted to the game's needs */
 .kuif.atom button#reveal-menu:hover {
     background: local;
     background-color: #8080807a;
-    border-radius: 360px;
+    border-radius: 50%;
 }
 
 .kuif select {
@@ -149,7 +149,21 @@ Specifically adjusted to the game's needs */
     position: absolute;
     top: 0;
     right: 0;
-    bottom: 550px;
+    bottom: 500px;
+}
+
+.kuif.atom #home-content-blur {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 500px;
+    margin: auto;
+    border-radius: 8px;
+    backdrop-filter: blur(2px);
+    background-color: #ffffff14;
+}
+
+.kuif.atom body {
+    background-image: url("https://images.pond5.com/simple-star-space-background-effect-023768280_prevstill.jpeg"); /* i did not copy i swear */
 }
 
 /* prefix game classes with .atom
