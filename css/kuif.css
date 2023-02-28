@@ -124,7 +124,7 @@ Specifically adjusted to the game's needs */
     margin-top: 10px;
 }
 
-.kuif .button-transparent {
+.kuif button.button-transparent {
     outline: transparent;
     border: none;
     background: transparent;
@@ -132,13 +132,21 @@ Specifically adjusted to the game's needs */
     font: inherit;
     /* cursor: pointer; */
 }
+.kuif button.button-transparent a {
+    text-decoration: none;
+    color: inherit;
+}
 .kuif.atom button#reveal-menu {
     background: transparent;
 }
 .kuif.atom button#reveal-menu:hover {
     background: local;
-    background-color: #8080807a;
+    background-color: #ffffff5e;
     border-radius: 50%;
+}
+.kuif.atom div#action-buttons {
+    margin-right: 8px;
+    display: flex;
 }
 
 .kuif select {
