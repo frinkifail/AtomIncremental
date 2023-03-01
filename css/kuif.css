@@ -215,6 +215,10 @@ Specifically adjusted to the game's needs */
 
 .kuif.atom body {
     background-image: url("https://images.pond5.com/simple-star-space-background-effect-023768280_prevstill.jpeg"); /* i did not copy i swear */
+    cursor: url('cursor_default_3.svg'), default;
+}
+.kuif.atom a, button {
+    cursor: url('cursor_pointer.svg'), pointer;
 }
 
 /* prefix game classes with .atom
