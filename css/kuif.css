@@ -184,6 +184,10 @@ Specifically adjusted to the game's needs */
     border-radius: 8px;
     backdrop-filter: blur(2px);
     background-color: #ffffff14;
+    display: flex;
+    gap: 8px;
+    text-align: center;
+    flex-wrap: wrap;
 }
 .kuif.atom .shop-item {
     padding-top: 5px;
@@ -195,8 +199,19 @@ Specifically adjusted to the game's needs */
     border-radius: 8px;
     backdrop-filter: blur(2px);
     background-color: #ffffff2c;
+    margin-top: 8px;
+    width: calc(100% * (1/4) - 4px - 1px);
 }
-.kuif.atom .shop-item#first-shop-item {}
+.kuif.atom .shop-item .header {
+    font-size: 22px;
+    font-weight: bold;
+}
+/* .kuif.atom .shop-item#first-shop-item {
+    margin-top: 4px;
+}
+.kuif.atom .shop-item#last-shop-item {
+    margin-bottom: 4px;
+} */
 
 .kuif.atom body {
     background-image: url("https://images.pond5.com/simple-star-space-background-effect-023768280_prevstill.jpeg"); /* i did not copy i swear */
