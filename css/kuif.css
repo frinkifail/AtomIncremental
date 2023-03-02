@@ -168,10 +168,10 @@ Specifically adjusted to the game's needs */
 }
 
 .kuif.atom button#buy-max-button {
-    position: sticky;
-    top: 0;
+    position: fixed;
+    /* top: 0; */
     right: 0;
-    bottom: 500px;
+    /* bottom: 500px; */
 }
 
 .kuif.atom #home-content-blur {
