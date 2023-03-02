@@ -2,9 +2,11 @@
 Maintained Version
 Old Version in @frinkifail/kuif (Private)
 Specifically adjusted to the game's needs */
-.kuif * { /* sheesh, looks pretty good */
+.kuif * {
+    /* sheesh, looks pretty good */
     border-radius: 4px;
 }
+
 :root {
     --text-color: #fff;
     --back-color: #222;
@@ -13,6 +15,11 @@ Specifically adjusted to the game's needs */
     --fluent-contained-button-back-color: #7e8fff;
     --fluent-contained-button-text-color: #e9ffff;
     --fluent-contained-button-glow-color: #bec7ff;
+    --cursor-default: url('cursor_default_3.svg');
+    --cursor-pointer: url('cursor_pointer.svg');
+    --font-family-sans-serif: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-family-current: var(--font-family-sans-serif);
+    --font-family-monospace: 'Roboto Mono', 'Consolas', 'Monaco', 'Inconsolata', monospace;
 }
 
 .fluent button.contained-button {
@@ -32,7 +39,7 @@ Specifically adjusted to the game's needs */
 .fluent body {
     background-color: var(--back-color);
     color: var(--text-color);
-    font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: var(--font-family-current);
 }
 
 .kuif code,
@@ -41,7 +48,7 @@ Specifically adjusted to the game's needs */
 .fluent code,
 .fluent pre,
 .fluent kbd {
-    font-family: 'Roboto Mono', 'Consolas', 'Monaco', 'Inconsolata', monospace;
+    font-family: var(--font-family-monospace);
 }
 
 .kuif button.text-button,
@@ -53,7 +60,7 @@ Specifically adjusted to the game's needs */
     background: transparent;
     border: none;
     letter-spacing: 2px;
-    font-family: Roboto;
+    font-family: var(--font-family-current);
     font-weight: bolder;
     cursor: pointer;
 }
@@ -132,18 +139,22 @@ Specifically adjusted to the game's needs */
     font: inherit;
     /* cursor: pointer; */
 }
+
 .kuif button.button-transparent a {
     text-decoration: none;
     color: inherit;
 }
+
 .kuif.atom button#reveal-menu {
     background: transparent;
 }
+
 .kuif.atom button#reveal-menu:hover {
     background: local;
     background-color: #ffffff5e;
     border-radius: 50%;
 }
+
 .kuif.atom div#action-buttons {
     margin-right: 8px;
     display: flex;
@@ -174,6 +185,7 @@ Specifically adjusted to the game's needs */
     backdrop-filter: blur(2px);
     background-color: #ffffff14;
 }
+
 .kuif.atom #shop-content-blur {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -189,6 +201,7 @@ Specifically adjusted to the game's needs */
     text-align: center;
     flex-wrap: wrap;
 }
+
 .kuif.atom .shop-item {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -202,10 +215,12 @@ Specifically adjusted to the game's needs */
     margin-top: 8px;
     width: calc(100% * (1/4) - 4px - 1px);
 }
+
 .kuif.atom .shop-item .header {
     font-size: 22px;
     font-weight: bold;
 }
+
 /* .kuif.atom .shop-item#first-shop-item {
     margin-top: 4px;
 }
@@ -214,12 +229,66 @@ Specifically adjusted to the game's needs */
 } */
 
 .kuif.atom body {
-    background-image: url("https://images.pond5.com/simple-star-space-background-effect-023768280_prevstill.jpeg"); /* i did not copy i swear */
+    background-image: url("https://images.pond5.com/simple-star-space-background-effect-023768280_prevstill.jpeg");
+    /* i did not copy i swear */
     cursor: url('cursor_default_3.svg'), default;
 }
-.kuif.atom a, button {
+
+.kuif.atom a,
+button {
     cursor: url('cursor_pointer.svg'), pointer;
 }
+
+/* The switch container */
+.kuif .switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 20px;
+}
+
+/* Hide default checkbox */
+.kuif .switch input {
+    display: none;
+}
+
+/* The slider */
+.kuif .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+/* Switch background when checked */
+.kuif .slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Change color of switch when checked */
+.kuif input:checked+.slider {
+    background-color: #2196F3;
+}
+
+/* Move the slider when checked */
+.kuif input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
 
 /* prefix game classes with .atom
 incase i forgor lol */

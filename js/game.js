@@ -5,6 +5,7 @@ const atom_counter_phosphor = document.getElementById('atom-counter-phosphor')
 const atom_counter_electron = document.getElementById('atom-counter-electron')
 const bang_atoms_button = document.getElementById('bang-atoms-button')
 const element_to_mash = document.getElementById('element_to_mash')
+const monospace_switch = document.getElementById("monospace-font-switch");
 
 // Stuff?
 let selected_atom_electron_bang_option = null; // expect a string
@@ -24,7 +25,7 @@ function convert_electron() {
     if (element_to_mash.value === "oxygen") {
         if (data.atoms.oxygen.amount >= 1) {
             data.atoms.oxygen.amount -= 1
-        data.electrons += 8
+            data.electrons += 8
         } else;
     }
 }
@@ -52,6 +53,13 @@ function update_misc() {
     if (buy_max) {
         convert_electron()
     }
+    if (monospace_switch.checked) {
+        document.body.style.setProperty("--font-family-current", getComputedStyle(document.body).getPropertyValue("--font-family-monospace"))
+        console.log("checked")
+    } else {
+        document.body.style.setProperty("--font-family-current", getComputedStyle(document.body).getPropertyValue("--font-family-sans-serif"))
+    }
+
 }
 
 const update_interval = setInterval(update_displays, 20)
