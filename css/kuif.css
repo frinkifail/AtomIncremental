@@ -168,7 +168,7 @@ Specifically adjusted to the game's needs */
 }
 
 .kuif.atom button#buy-max-button {
-    position: absolute;
+    position: sticky;
     top: 0;
     right: 0;
     bottom: 500px;
@@ -214,11 +214,17 @@ Specifically adjusted to the game's needs */
     background-color: #ffffff2c;
     margin-top: 8px;
     width: calc(100% * (1/4) - 4px - 1px);
+    cursor: var(--cursor-pointer), pointer;
 }
 
 .kuif.atom .shop-item .header {
     font-size: 22px;
     font-weight: bold;
+}
+.kuif.atom .shop-item .cost {
+    position: absolute;
+    bottom: 1px;
+    left: 4px;
 }
 
 /* .kuif.atom .shop-item#first-shop-item {
