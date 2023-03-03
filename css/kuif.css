@@ -65,6 +65,14 @@ Specifically adjusted to the game's needs */
     cursor: pointer;
 }
 
+.kuif button.text-button:hover,
+.kuif text-button:hover,
+.kuif tb:hover,
+.kuif tbb:hover,
+.kuif text-button-big:hover {
+    cursor: var(--cursor-pointer);
+}
+
 .kuif button.text-button.fs-big,
 .kuif text-button-big,
 .kuif tbb {
@@ -147,12 +155,12 @@ Specifically adjusted to the game's needs */
 
 .kuif.atom button#reveal-menu {
     background: transparent;
+    border-radius: 50%;
 }
 
 .kuif.atom button#reveal-menu:hover {
     background: local;
     background-color: #ffffff5e;
-    border-radius: 50%;
 }
 
 .kuif.atom div#action-buttons {
@@ -225,6 +233,11 @@ Specifically adjusted to the game's needs */
     position: absolute;
     bottom: 1px;
     right: 4px;
+}
+.kuif.atom .shop-item .amount {
+    position: absolute;
+    bottom: 1px;
+    left: 4px;
 }
 
 /* .kuif.atom .shop-item#first-shop-item {
