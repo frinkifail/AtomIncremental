@@ -19,3 +19,6 @@ reveal_menu.onclick = () => {
         setTimeout(function () { menu.style.transform = "translateX(0px)"; }, 0)
     }
 }
+document.getElementById("clickable-nothingreally").onclick = function() {
+    document.getElementById("clickable-nothingreally").style.transform  = "translateX(-200px)"
+}
