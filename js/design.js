@@ -20,5 +20,5 @@ reveal_menu.onclick = () => {
     }
 }
 document.getElementById("clickable-nothingreally").onclick = function() {
-    document.getElementById("clickable-nothingreally").style.transform  = "translateX(-200px)"
+    document.getElementById("clickable-nothingreally").style.transform  = "translateX(-600px)"
 }
