@@ -237,11 +237,16 @@ Specifically adjusted to the game's needs */
     background-color: #ad7eff;
     padding: 6px 12px;
     font-family: Rubik;
+    color: #040303;
 }
 .kuif.atom .shop-item .amount {
     position: absolute;
-    bottom: 1px;
+    bottom: -11px;
     left: 4px;
+    background-color: #a9ffb0;
+    padding: 6px 12px;
+    font-family: Rubik;
+    color: #101010;
 }
 
 /* .kuif.atom .shop-item#first-shop-item {
