@@ -43,6 +43,10 @@ Specifically adjusted to the game's needs */
     font-family: var(--font-family-current);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .kuif code,
 .kuif pre,
 .kuif kbd,
