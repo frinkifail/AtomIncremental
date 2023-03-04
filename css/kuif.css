@@ -3,6 +3,7 @@ Maintained Version
 Old Version in @frinkifail/kuif (Private)
 Specifically adjusted to the game's needs */
 @import url('https://fonts.googleapis.com/css?family=Rubik');
+
 .kuif * {
     /* sheesh, looks pretty good */
     border-radius: 4px;
@@ -234,6 +235,7 @@ html {
     font-size: 22px;
     font-weight: bold;
 }
+
 .kuif.atom .shop-item .cost {
     position: absolute;
     bottom: -11px;
@@ -243,6 +245,7 @@ html {
     font-family: Rubik;
     color: #040303;
 }
+
 .kuif.atom .shop-item .amount {
     position: absolute;
     bottom: -11px;
@@ -262,18 +265,30 @@ html {
     width: fit-content;
     transition: transform 1.2s ease-in-out;
 }
+
 .kuif .card .header {
     padding-left: 8px;
     font-size: 22px;
     font-weight: bold;
 }
+
 /* TODO: .kuif .card .desc */
 .kuif .card.success {
     background-color: #1a7221d7;
     color: rgb(204, 232, 205);
 }
+
 .kuif .card.clickable {
     cursor: var(--cursor-pointer), pointer;
+}
+
+.kuif .card.alert-dialog {
+    /* display: no; */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
 }
 
 /* .kuif.atom .shop-item#first-shop-item {
