@@ -27,13 +27,15 @@ document.getElementById("clickable-nothingreally").onclick = function() {
 document.getElementById('open-dialog').onclick = function() {
     if (dialog_open) {
         dialog_open = false;
-        document.getElementById('blur-bg').style.display = "none";
-        document.getElementById('card-dialog').style.display = "none";
+        document.getElementById('blur-bg').style.height = "100%";
+        document.getElementById('card-dialog').style.height = "auto";
+        document.getElementById('card-dialog').style.display = "block";
     }
     else {
         dialog_open = true;
-        document.getElementById('blur-bg').style.display = "initial";
-        document.getElementById('card-dialog').style.display = "initial";
+        document.getElementById('blur-bg').style.height = 0;
+        document.getElementById('card-dialog').style.height = 0;
+        setTimeout(function(){document.getElementById('card-dialog').style.display = "none";}, 500)
     }
 }
 document.getElementById('blur-bg').onclick = function() {

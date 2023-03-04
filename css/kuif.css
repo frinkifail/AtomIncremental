@@ -95,7 +95,8 @@ html {
     background-size: cover;
     backdrop-filter: blur(10px);
     z-index: 9998;
-    display: none;
+    height: 0;
+    transition: height 0.5s ease-in-out;
 }
 
 .kuif .center-text {
@@ -289,6 +290,7 @@ html {
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
+    transition: height 0.5s ease-in-out;
 }
 
 /* .kuif.atom .shop-item#first-shop-item {
