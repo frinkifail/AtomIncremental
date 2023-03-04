@@ -35,7 +35,7 @@ document.getElementById('open-dialog').onclick = function() {
         dialog_open = true;
         document.getElementById('blur-bg').style.height = 0;
         document.getElementById('card-dialog').style.height = 0;
-        setTimeout(function(){document.getElementById('card-dialog').style.display = "none";}, 500)
+        setTimeout(function(){document.getElementById('card-dialog').style.display = "none";}, 500) // pls tell how animate properly bruh
     }
 }
 document.getElementById('blur-bg').onclick = function() {
