@@ -58,6 +58,10 @@
         </header>
         <div class="mdc-top-app-bar--fixed-adjust" id="fixappbar"
             style="transition: margin-left 0.3s ease-out; margin-left: 220px;">
+            <div class="goal-container">
+                <label for="progress-goal" id="progress-goal label">Reach 1000 Electron</label>
+                <progress value="0" max="1000" id="progress-goal"></progress>
+            </div>
             <button class="text-button fs-big" id="buy-max-button">Buy Max: <span
                 id="buy-max-value-display">false</span></button>
             <h1 id="home">Home</h1>
@@ -150,8 +154,9 @@ Phosphor: 1 = 64 electrons
                     <i class="fa-solid fa-star"></i><span class="header">Test</span>
                     <p class="desc">Hi Mom</p>
                 </div>
+                <label for="progress-test">Doing something:</label>
+                <progress value="500" max="1000" id="progress-test">50%</progress>
             </div>
-        </div>
         </div>
     </main>
 

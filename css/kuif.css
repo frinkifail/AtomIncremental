@@ -361,6 +361,12 @@ button {
     transform: translateX(26px);
 }
 
+.kuif.atom .goal-container {}
+.kuif.atom .goal-container progress {
+    width: 100%;
+    border-radius: 16px;
+}
+
 
 /* prefix game classes with .atom
 incase i forgor lol */
