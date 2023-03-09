@@ -79,7 +79,8 @@ function update_displays() {
     // if (goal_set.current_goal.cname === "electron-1000-start") {
     //     goal_set.current_goal.name_goal = "Reach 1000 Electrons"
     //     goal_set.current_goal.value = data.electrons
-    // }
+    // } 
+    goal_set.current_goal.percent = Math.round(((goal_set.current_goal.value/goal_set.current_goal.current_max)*100) * 10) / 10
     return true;
 }
 
