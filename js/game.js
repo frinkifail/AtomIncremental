@@ -90,10 +90,7 @@ function update_misc() {
         );
     }
     // Goal Stuff
-    if (goal_set.current_goal.cname === "electron-1000-start") {
-        goal_set.current_goal.percent = Math.round(((goal_set.current_goal.value/goal_set.sets["electron-1000-start"].max)*100) * 10) / 10
-        goal_set.current_goal.current_max = goal_set.sets["electron-1000-start"].max
-    }
+    goal_set.current_goal.current_max = goal_set.sets[goal_set.current_goal.cname].max
     goal_set.goal_label_object.innerText = goal_set.current_goal.name_goal+" ("+goal_set.current_goal.percent.toString()+"%) ["+goal_set.current_goal.value.toString()+'/'+goal_set.current_goal.current_max+']' // i know i could've used ${} and `` but i just realized after finishing so uhhhhhh leave it be
     goal_set.goal_object.value = goal_set.current_goal.value
     // Other data stuff
