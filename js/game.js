@@ -96,6 +96,9 @@ function update_misc() {
     }
     goal_set.goal_label_object.innerText = goal_set.current_goal.name_goal+" ("+goal_set.current_goal.percent.toString()+"%) ["+goal_set.current_goal.value.toString()+'/'+goal_set.current_goal.current_max+']' // i know i could've used ${} and `` but i just realized after finishing so uhhhhhh leave it be
     goal_set.goal_object.value = goal_set.current_goal.value
+    // Other data stuff
+    data.user_data.email = localStorage.getItem("/AtomIncremental/UserDataTemp/Email")
+    data.user_data.username = localStorage.getItem("/AtomIncremental/UserDataTemp/Username")
 }
 
 const update_interval = setInterval(update_displays, 20);

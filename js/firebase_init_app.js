@@ -63,3 +63,14 @@ const uiConfig = {
 // 3) Call the 'start' method on our ui class
 // including our configuration options.
 ui.start("#firebaseui-auth-container", uiConfig)
+
+firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+        data.user_data.email = user.email;
+        console.log(data.user_data.email);
+    } else {
+        console.warn("No user is signed in!");
+    }
+});
+setInterval(function(){localStorage.setItem("/AtomIncremental/UserDataTemp/Email", data.user_data.email);
+localStorage.setItem("/AtomIncremental/UserDataTemp/Username", data.user_data.username)}, 50)

@@ -13,4 +13,8 @@ const data = {
         phosphor: {unlocked: false, amount: 0, cost: 720, growth: 1.2}
     },
     generator_timing: 500, // in ms
+    user_data: {
+        email: localStorage.getItem("/AtomIncremental/UserDataTemp/Email"),
+        username: localStorage.getItem("/AtomIncremental/UserDataTemp/Username")
+    }
 }
