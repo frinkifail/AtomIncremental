@@ -16,16 +16,38 @@ const goal_set = {
         cname: "electron-1000-start",
         value: null,
         percent: null,
-        current_max: null
+        current_max: null,
+        current_next_goal: null,
+        current_update_by: null
     },
     sets: {
         "electron-1000-start": {
             max: 1000,
+            name: "Reach 1000 Electrons",
+            next_goal: "goal-placeholder-done",
+            update_by: "electrons" // data value
         },
+        "goal-placeholder-done": {
+            max: -1000,
+            name: "Loading!",
+            next_goal: null
+        }
     },
     goal_object: document.getElementById('progress-goal'),
-    goal_label_object: document.getElementById('progress-goal label')
+    goal_label_object: document.getElementById('progress-goal label'),
+    set_goal: function(cname) {
+        goal_set.current_goal.cname = cname
+        goal_set.current_goal.current_max = goal_set.sets[cname].max
+        goal_set.current_goal.name_goal = goal_set.sets[cname].name
+        goal_set.current_goal.current_next_goal = goal_set.sets[cname].next_goal
+        goal_set.current_goal.current_update_by = goal_set.sets[cname].update_by
+    },
+    next_goal: function() {
+        return goal_set.current_goal.current_next_goal
+    }
 };
+
+goal_set.set_goal("electron-1000-start")
 
 document.getElementById("buy-max-button").onclick = () => {
     if (buy_max) {
@@ -54,10 +76,10 @@ function update_displays() {
     atom_counter_helium.innerText = data.atoms.helium.amount.toLocaleString();
     atom_counter_phosphor.innerText = data.atoms.phosphor.amount.toLocaleString();
     atom_counter_electron.innerText = data.electrons.toLocaleString();
-    if (goal_set.current_goal.cname === "electron-1000-start") {
-        goal_set.current_goal.name_goal = "Reach 1000 Electrons"
-        goal_set.current_goal.value = data.electrons
-    }
+    // if (goal_set.current_goal.cname === "electron-1000-start") {
+    //     goal_set.current_goal.name_goal = "Reach 1000 Electrons"
+    //     goal_set.current_goal.value = data.electrons
+    // }
     return true;
 }
 
