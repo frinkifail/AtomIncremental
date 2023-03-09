@@ -5,6 +5,10 @@ Ok I just realized there's a game similar to this called Elemental Incremental w
 
 Inspired by my old game Command Incremental which is inspired by Points Incremental (Factory Idle ([@melk12345/Factory-Idle](https://github.com/melk12345/Factory-Idle))) which is inspired by Particle Incremental ([@XnoobSpeakable/Particle-Incremental](https://github.com/XnoobSpeakable/Particle-Incremental)) which is inspired by other incremental games :)
 
+## How to play?
+Hop on the latest release on [here](https://frinkifail.github.io/AtomIncremental)
+orrrrr if you're feeling kinda nightly, [here](https://atomincremental-dev.netlify.app)
+
 ## Features
 ### Atoms
 You got uhh
