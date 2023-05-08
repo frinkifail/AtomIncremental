@@ -1,4 +1,5 @@
 # Atom Incremental
+### Discontinued.
 Ah yes, another Distance Incremental copy
 
 Ok I just realized there's a game similar to this called Elemental Incremental which I literally just found [@SuperSpruce/Elemental-Incremental](https://github.comx/SuperSpruce/Elemental-Incremental)
